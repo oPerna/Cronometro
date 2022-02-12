@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+  <link rel="stylesheet" href="crono.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Average+Sans&family=Lexend+Exa:wght@600&display=swap');
+  </style>
+  <link href="//db.onlinewebfonts.com/c/84cb021d5f9af287ffff84b61beef6dc?family=clockicons" rel="stylesheet" type="text/css"/>
+
+  <title>Projeto Cronometro</title>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <a class="logo" href="#">
+        <h1>My Projects</h1>
+      </a>
+
+      <div class="mobile-menu">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+      </div>
+    </nav>
+  </header>
+  
+  <div class="wrapper">
+    <h2>Cronômetro Online</h1>
+
+    <div class="box">
+      <div class="container_button">
+        <button id="button-start">Start</button>
+        <button id="button-stop">Stop</button>
+        <button id="button-reset">Reset</button>
+      </div>
+    
+      <div class="visor">
+        <p>
+          <span id="hours">00</span>
+          <span id="minutes">00</span>
+          <span id="seconds">00</span>
+          <span id="tens">00</span>
+        </p>
+      </div>
+    </div>
+  </div> 
+
+
+  <script src="crono.js"></script>
+</body>
+
+</html>

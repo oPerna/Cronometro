@@ -1,0 +1,180 @@
+*, ::before, ::after {  
+    padding: 0;
+    margin: 0%;
+    box-sizing: border-box;
+}
+
+:root {
+    --cor-1: #18161f;
+    --cor-2: #242030;
+    --cor-3: #7b68ee;
+    --cor-4: #c0b5ff;
+}
+
+body {
+    background-color: #242030;
+    
+    overflow-x: hidden;
+    
+    font-family: 'Average Sans', sans-serif;
+}
+
+/* HEADER */
+
+nav {
+    height: 8vh;
+    
+    background-color: var(--cor-1);
+    box-shadow: 0px 5px 10px #000;
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 20px;
+    letter-spacing: 3px;
+    margin-left: 5px;
+    
+    color: var(--cor-3);
+    
+    text-align: left;
+    transition: ease-out 0.2s;
+}
+
+.logo:hover {
+    color: var(--cor-4);
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+}
+
+.nav-list li {
+    letter-spacing: 3px;
+    margin-left: 30px;
+    
+    transition: 0.3s;
+}
+
+.nav-list a:hover {
+    opacity: 0.6;
+}
+
+nav a{ 
+    color: #fff;
+    text-decoration: none;    
+}
+
+.wrapper {
+    width: 90vw;
+    margin: 50px auto;
+    gap: 40px;
+
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+h2 {
+    font-weight: 100;
+    font-size: 2.6em;
+    letter-spacing: 5px;
+    
+    color: var(--cor-3);
+}
+
+h2::after {
+    content: 'Cronômetro Vanilla feito em JavaScript';
+    
+    font-size: 0.3em;
+    color: var(--cor-4);
+    display: block;
+}
+
+.box {
+    width: 40vw;
+    border-radius: 10px;
+    border: 1em solid #100e14;
+    
+    background-color: var(--cor-1);
+    box-shadow: 
+    inset 5px 5px 5px #000,
+    inset -5px -5px 10px #000;
+    
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-self: center;
+}
+
+.container_button {
+    padding: 10px;
+    gap: 20px;
+    border-right: 3px solid #100e14;
+    box-shadow: 5px 0 3px #000;
+
+    flex-direction: column;
+    display: flex;
+}
+
+.visor {
+    padding: 10px 5px;
+    margin: 4em auto;
+    border-radius: 10px;
+    border: .5em solid #100e14;
+
+    background-color: var(--cor-2);
+    box-shadow: 
+    5px 5px 10px #000,
+    inset 5px 5px 60px var(--cor-4),
+    inset -5px -5px 60px var(--cor-4);
+
+    display: flex;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-family: "clockicons";
+}
+
+#tens {
+    font-size: 1.5em;
+    color: brown;
+}
+
+#seconds, #minutes, #hours {
+    color: var(--cor-1);
+    font-size:3.5em;
+}
+
+#minutes::after, #hours::after {
+    content: ':';
+    font-size: 1em;
+}
+#seconds::after {
+    content: '.';
+    font-size: 1em;
+}
+  
+button {
+    font-size:1.2em;
+    padding: 15px;
+    border-radius: 10px;
+    width: 100px;
+    letter-spacing: 1px;
+    
+    color: var(--cor-4);
+    background-color: var(--cor-2);
+    box-shadow: 0px 3px 10px #000;
+    
+    border: none;
+    cursor:pointer;
+    text-transform: uppercase;
+}
+button:hover {
+    background-color: #c0b5ff;
+    color: #000;
+}
