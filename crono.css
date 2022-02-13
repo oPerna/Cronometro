@@ -135,8 +135,6 @@ h2::after {
 
     display: flex;
     white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
     font-family: "clockicons";
 }
 
@@ -172,9 +170,32 @@ button {
     
     border: none;
     cursor:pointer;
+    outline: none;
     text-transform: uppercase;
 }
 button:hover {
     background-color: #c0b5ff;
     color: #000;
+}
+
+@media (max-width: 1140px) {
+    .box {
+        min-width: 310px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .container_button {
+        border: 3px solid #100e14;
+        box-shadow: 0 0 3px #000;
+    }
+
+    .visor {
+        width: 270px;
+    }
+
+    #seconds, #minutes, #hours {
+        color: var(--cor-1);
+        font-size:3.3em;
+    }
 }

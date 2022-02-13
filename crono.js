@@ -14,6 +14,7 @@ window.onload = function() {
     var buttonStop = document.getElementById("button-stop");
     var buttonReset = document.getElementById("button-reset");
 
+    
 
     buttonStart.onclick = function() {
         clearInterval(interval);
@@ -97,4 +98,52 @@ window.onload = function() {
             appendHours.innerHTML = hours;
         }
     }
+
+    document.addEventListener("keypress", function(e){
+        var press = e.which || e.keyCode || 0;
+
+        if(press == 32){
+        const btn = document.querySelector("#button-stop");
+
+        btn.click();
+        }
+    });
+
+    window.addEventListener('keydown', function(e) {
+        var codigoTecla = e.which || e.keyCode || 0;
+        var esc = codigoTecla == 27;
+        if (esc) {
+            const btn = document.querySelector("#button-reset");
+
+            btn.click();
+        }
+    });
+    
+    window.addEventListener('keydown', function(e) {
+        var codigoTecla = e.which || e.keyCode || 0;
+        var enter = codigoTecla == 13;
+        if (enter) {
+            const btn = document.querySelector("#button-start");
+
+            btn.click();
+        }
+    });
+
+    // document.addEventListener("keydown", function(e){
+    //     var press = e.code || e.key || 0;
+    
+    //     if(press == 'keyS') {
+    //     const btn = document.query("#button-stop");
+    //     btn.click();
+    //     }
+    // });
+    
+    // document.addEventListener("keydown", function(e){
+    //     var press = e.code || e.key || 0;
+    
+    //     if(press == 'Escape') {
+    //     const btn = document.querySelector("#button-reset");
+    //     btn.click();
+    //     }
+    // }); 
 }
