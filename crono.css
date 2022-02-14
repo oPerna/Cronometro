@@ -157,7 +157,7 @@ h2::after {
     font-size: 1em;
 }
   
-button {
+.button_itens {
     font-size:1.2em;
     padding: 15px;
     border-radius: 10px;
@@ -173,7 +173,7 @@ button {
     outline: none;
     text-transform: uppercase;
 }
-button:hover {
+.button_itens:hover {
     background-color: #c0b5ff;
     color: #000;
 }
